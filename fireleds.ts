@@ -21,6 +21,7 @@ namespace fireleds
     let ledPin = DigitalPin.P13;
     let ledCount = 50;
     let updateMode = ledMode.Auto;
+    let btEnabled = false;
 
     function clamp(value: number, min: number, max: number): number
     {
@@ -40,7 +41,7 @@ namespace fireleds
     //% blockGap=8
     export function enableBluetooth(enable: boolean)
     {
-        btDisabled = !enable;
+        btEnabled = enable;
     }
 
 // Generic FireLed Blocks
@@ -203,7 +204,7 @@ namespace fireleds
     //% blockGap=8
     export function ledShow(): void
     {
-        if (btDisabled)
+        if (! btEnabled)
             fire().updateBand();
     }
 
@@ -211,18 +212,18 @@ namespace fireleds
       * Get numeric value of colour
       * @param colour Standard RGB Led Colours eg: #ff0000
       */
-    //% blockId="FireColours" block=%color
+    //% blockId="FireColours" block=%colour
     //% group=Advanced
     //% blockHidden=false
     //% weight=70
     //% blockGap=8
     //% shim=TD_ID colorSecondary="#e7660b"
-    //% color.fieldEditor="colornumber"
-    //% color.fieldOptions.decompileLiterals=true
-    //% color.defl='#ff0000'
-    //% color.fieldOptions.colours='["#FF0000","#659900","#18E600","#80FF00","#00FF00","#FF8000","#D82600","#B24C00","#00FFC0","#00FF80","#FFC000","#FF0080","#FF00FF","#B09EFF","#00FFFF","#FFFF00","#8000FF","#0080FF","#0000FF","#FFFFFF","#FF8080","#80FF80","#40C0FF","#999999","#000000"]'
-    //% color.fieldOptions.columns=5
-    //% color.fieldOptions.className='rgbColorPicker'
+    //% colour.fieldEditor="colornumber"
+    //% colour.fieldOptions.decompileLiterals=true
+    //% colour.defl='#ff0000'
+    //% colour.fieldOptions.colours='["#FF0000","#659900","#18E600","#80FF00","#00FF00","#FF8000","#D82600","#B24C00","#00FFC0","#00FF80","#FFC000","#FF0080","#FF00FF","#B09EFF","#00FFFF","#FFFF00","#8000FF","#0080FF","#0000FF","#FFFFFF","#FF8080","#80FF80","#40C0FF","#999999","#000000"]'
+    //% colour.fieldOptions.columns=5
+    //% colour.fieldOptions.className='rgbColorPicker'
     export function fireColours(colour: number): number
     {
         return colour;
