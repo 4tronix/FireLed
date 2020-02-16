@@ -13,7 +13,7 @@ enum ledMode
 /**
  * Custom blocks
  */
-//% weight=50 color=#e7660b icon="\uf2a1"
+//% weight=50 color=#e7660b icon="\uf0a3"
 //% groups='["Bluetooth","Basic","Advanced"]'
 namespace fireleds
 {
@@ -48,7 +48,7 @@ namespace fireleds
 
     /**
       * Create a FireLed band on selected Pin of specified number of LEDs.
-      * @param pin pin connected to FireLeds
+      * @param pin pin connected to FireLeds. eg: P13
       * @param count number of FireLeds in the band. eg: 25
       */
     //% blockId="CreateBand" block="create FireLed band on%pin|with %count|FireLeds"
