@@ -13,8 +13,8 @@ enum ledMode
 /**
  * Custom blocks
  */
-//% weight=50 color=#e7660b icon="\uf1ba"
-//% groups='["Basic","Advanced"]'
+//% weight=50 color=#e7660b icon="\uf2a1"
+//% groups='["Bluetooth","Basic","Advanced"]'
 namespace fireleds
 {
     let band: fireled.Band;
@@ -36,7 +36,7 @@ namespace fireleds
     //% blockId="EnableBluetooth"
     //% block="enable Bluetooth & disable FireLeds%enable"
     //% enable.shadow="toggleYesNo"
-    //% subcategory=Basic
+    //% group=Bluetooth
     //% weight=100
     //% blockGap=8
     export function enableBluetooth(enable: boolean)
@@ -51,7 +51,7 @@ namespace fireleds
       * @param pin pin connected to FireLeds
       * @param count number of FireLeds in the band. eg: 25
       */
-    //% blockId="CreateBand" block="create FireLed band on pin%pin|with %count|FireLeds"
+    //% blockId="CreateBand" block="create FireLed band on%pin|with %count|FireLeds"
     //% group=Basic
     //% weight=90
     //% blockGap=8
