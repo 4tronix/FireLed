@@ -1,11 +1,11 @@
 {
     "name": "FireLeds",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Microsoft MakeCode package for 4tronix FireLed Products",
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "fireled": "github:4tronix/FireLedsBase"
+        "fireled": "github:4tronix/FireLedsBase#0.1.2"
     },
     "files": [
         "README.md",
