@@ -18,8 +18,8 @@ enum ledMode
 namespace fireleds
 {
     let band: fireled.Band;
-    let ledPin = DigitalPin.P13;
-    let ledCount = 50;
+    let ledPin = DigitalPin.P1;
+    let ledCount = 25;
     let updateMode = ledMode.Auto;
     let btEnabled = false;
 
@@ -48,7 +48,7 @@ namespace fireleds
 
     /**
       * Create a FireLed band on selected Pin of specified number of LEDs.
-      * @param pin pin connected to FireLeds. eg: P13
+      * @param pin pin connected to FireLeds. eg: P1
       * @param count number of FireLeds in the band. eg: 25
       */
     //% blockId="CreateBand" block="create FireLed band on%pin|with %count|FireLeds"
